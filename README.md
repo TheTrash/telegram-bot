@@ -38,9 +38,7 @@ Linux: `source ./telegram-bot/bin/activate`
 
 Windows: `Scripts\activate`
 
-Creare un file token.py ed inserire
-
-`token = '<your token here>'`
+Creare un file token.txt ed inserire il token all'interno del file
 
 Avviare:
 `pip install requirements.txt`
