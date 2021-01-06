@@ -1,19 +1,16 @@
 from telegram.ext import Updater
 from telegram import User, Bot
-from misc import shutdown
 from random import randint
 from rec_catdog import recognition
-from token import token
 import os
 import threading
 
-updater = Updater(token=token)
+updater = Updater(token=open("token.txt", "r").readline())
 dispatcher = updater.dispatcher
 
 import logging
 logging.basicConfig(format= '%(asctime)s - %(name)s - %(levelname)s - %(message)s', level=logging.INFO)
 
-lists = {'po':[], 'all':[]}
 
 def start(update, context):
     context.bot.send_message(chat_id=update.effective_chat.id, text="Hello_world!")
@@ -46,27 +43,13 @@ def image_handler(update, context):
         update.message.reply_text(f'See Ya, Pal')
 
 
-def stop(update,context):
-    user = update.message.from_user
-    if user.id == '32425319':
-        context.bot.send_message(chat_id=update.effective_chat.id, text='quitting but you have to manually reboot the serben')
-        threading.Thread(target=shutdown(updater)).start()
-    else:
-        context.bot.send_message(chat_id=update.effective_chat.id, text='u cant do this shit')
-
-
-    
-
 from telegram.ext import CommandHandler, MessageHandler, Filters
 start_handler = CommandHandler('start',start)
-quit_handler = CommandHandler('quit', stop)
 get_handler = CommandHandler('get_id', get_id)
 
 dispatcher.add_handler(MessageHandler(Filters.photo, image_handler))
 
-
 dispatcher.add_handler(start_handler)
-dispatcher.add_handler(quit_handler)
 dispatcher.add_handler(get_handler)
 
 

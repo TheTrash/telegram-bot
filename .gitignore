@@ -2,6 +2,8 @@
 __pycache__/
 *.py[cod]
 *$py.class
+.gitattributes
+.gitignore
 
 # C extensions
 *.so
@@ -128,4 +130,4 @@ dmypy.json
 # Pyre type checker
 .pyre/
 
-token.py
+token.txt
