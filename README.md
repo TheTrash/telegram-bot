@@ -29,9 +29,9 @@ Prerequisiti: Avere Python:3.7.9, pip e virtualenv installati.
 
 `virtualenv telegram-bot`
 
-`git clone https://github.com/TheTrash/telegram-bot.git`
-
 `cd telegram-bot`
+
+`git clone https://github.com/TheTrash/telegram-bot.git`
 
 Attivare il virtualenv:
 - Linux: `source ./bin/activate`  
