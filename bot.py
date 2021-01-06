@@ -3,10 +3,11 @@ from telegram import User, Bot
 from misc import shutdown
 from random import randint
 from rec_catdog import recognition
-
+from token import token
 import os
 import threading
-updater = Updater(token='827610144:AAEPADlOpsNV6u32DCdAafS4CoT5agKm_Z0')
+
+updater = Updater(token=token)
 dispatcher = updater.dispatcher
 
 import logging

@@ -1,4 +1,4 @@
-# telegram-bot
+# Telegram-bot
 
 Tramite la libreria python-telegram-bot abbiamo realizzato un bot che permette di sfruttare il terzo modello trainato durante l'esercitazione sul machine learning.
 
@@ -19,3 +19,36 @@ In rec_catdog.py ritroviamo alcuni degli import mostrati nella parte configurati
 Impostiamo le grandezze dell' immagine  accettata dal modello, lo carichiamo tramite load_model.
 Definita la funzione convertiamo l'immagine in modo che sia compatibile col mnodello e traimte il predict effettuiamo la predizione.
 Come descritto precedentemente ritorniamo la predizione e il valore numerico.
+
+# Installazione
+Creare un bot su telegram e ottenere il token per utilizzarlo.
+Prerequisiti: Avere Python:3.7.9, pip e virtualenv installati.
+
+
+`mkdir telegram-bot`
+
+`virtualenv telegram-bot`
+
+`git clone https://github.com/TheTrash/telegram-bot.git`
+
+`cd telegram-bot`
+
+Attivare il virtualenv
+Linux: `source ./telegram-bot/bin/activate`
+
+Windows: `Scripts\activate`
+
+Creare un file token.py ed inserire
+
+`token = '<your token here>'`
+
+Avviare:
+`pip install requirements.txt`
+
+Attenzione, tensorflow su Windows potrebbe richiedere di installare pacchetti aggiuntivi manualmente
+
+`python bot.py`
+
+Ed ecco attivo il bot
+
+
