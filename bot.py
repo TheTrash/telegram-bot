@@ -21,32 +21,6 @@ def get_id(update, context):
     user = update.message.from_user
     context.bot.send_message(chat_id=update.effective_chat.id, text='tuo ID: ' + str(user.id) + '\nUser: ' + str(user.username))
 
-def iscrivimi(update, context):
-    message = str(update.effective_message.text).replace('/iscrivimi ','')
-    user = update.message.from_user
-    if message in lists:
-        l = lists[message]
-        if str(user.username) not in l:
-            l.append(str(user.username))
-            res='Ti ho iscritto'
-        else:
-            res = 'Sei già iscritto'
-    else:
-        res = str(message)
-    context.bot.send_message(chat_id=update.effective_chat.id, text=res)
-
-def tag(update,context):
-    message = str(update.effective_message.text).replace('/tag ','')
-    m = ''
-    user = str(update.message.from_user.username)
-    if lists[message] is not []:
-        for u in lists[message]:
-            if user != u:
-                m += "@"+u+"\n"
-    else:
-        m = "no one is in this list"
-
-    context.bot.send_message(chat_id=update.effective_chat.id, text=m)
 
 def image_handler(update, context):
     def remove_image(filename):
@@ -71,7 +45,6 @@ def image_handler(update, context):
         update.message.reply_text(f'See Ya, Pal')
 
 
-
 def stop(update,context):
     user = update.message.from_user
     if user.id == '32425319':
@@ -89,11 +62,6 @@ quit_handler = CommandHandler('quit', stop)
 get_handler = CommandHandler('get_id', get_id)
 
 dispatcher.add_handler(MessageHandler(Filters.photo, image_handler))
-
-
-
-iscrivi_handler = CommandHandler('iscrivimi', iscrivimi)
-crea_handler = CommandHandler('tag', tag)
 
 
 dispatcher.add_handler(start_handler)
