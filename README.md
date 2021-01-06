@@ -15,7 +15,7 @@ La funzione restituisce il risultato e una predizione numerica, ma viene utilizz
 
 Le altre funzioni utilizzate sono di test e non di interesse per il nostro scopo.
 
-In rec_catdog.py ritroviamo alcuni degli import mostrati nella parte configurativa della relazione.  
+In [rec_catdog.py](rec_catdog.py) ritroviamo alcuni degli import mostrati nella parte configurativa della relazione.  
 Impostiamo le grandezze dell' immagine  accettata dal modello, lo carichiamo tramite load_model.  
 Definita la funzione convertiamo l'immagine in modo che sia compatibile col mnodello e traimte il predict effettuiamo la predizione.  
 Come descritto precedentemente restituiamo la valutazione e il valore numerico.
