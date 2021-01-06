@@ -24,22 +24,19 @@ Come descritto precedentemente restituiamo la valutazione e il valore numerico.
 Creare un bot su telegram e ottenere il token per utilizzarlo.
 Prerequisiti: Avere Python:3.7.9, pip e virtualenv installati.
 
-
-`mkdir telegram-bot`
+`git clone https://github.com/TheTrash/telegram-bot.git`
 
 `virtualenv telegram-bot`
 
 `cd telegram-bot`
 
-`git clone https://github.com/TheTrash/telegram-bot.git`
-
 Attivare il virtualenv:
 - Linux: `source ./bin/activate`  
 - Windows: `Scripts\activate`
 
-Creare un file *token.txt* ed inserirci il token ottenuto su telegram all'interno del file
+Creare un file *token.txt* ed inserire il token ottenuto su telegram all'interno del file
 
-`pip install requirements.txt`
+`pip install -r requirements.txt`
 
 *Attenzione, tensorflow su Windows potrebbe richiedere di installare pacchetti aggiuntivi manualmente*
 
