@@ -1,0 +1,3 @@
+#Ignore this file for heroku deploy
+*.ipynb
+test.py
